@@ -1,0 +1,35 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.31919.166
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JourneyTracker.Android", "JourneyTracker\JourneyTracker.Android\JourneyTracker.Android.csproj", "{A3195F36-4A95-4784-93B4-A8580081A464}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JourneyTracker", "JourneyTracker\JourneyTracker\JourneyTracker.csproj", "{6C7D7EA3-303F-48C5-A28F-C7DF5AAB46B0}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A3195F36-4A95-4784-93B4-A8580081A464}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A3195F36-4A95-4784-93B4-A8580081A464}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A3195F36-4A95-4784-93B4-A8580081A464}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{A3195F36-4A95-4784-93B4-A8580081A464}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A3195F36-4A95-4784-93B4-A8580081A464}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A3195F36-4A95-4784-93B4-A8580081A464}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{6C7D7EA3-303F-48C5-A28F-C7DF5AAB46B0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6C7D7EA3-303F-48C5-A28F-C7DF5AAB46B0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6C7D7EA3-303F-48C5-A28F-C7DF5AAB46B0}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{6C7D7EA3-303F-48C5-A28F-C7DF5AAB46B0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6C7D7EA3-303F-48C5-A28F-C7DF5AAB46B0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6C7D7EA3-303F-48C5-A28F-C7DF5AAB46B0}.Release|Any CPU.Deploy.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {80CD04F1-689E-44D7-853C-DB7570A96A0C}
+	EndGlobalSection
+EndGlobal
