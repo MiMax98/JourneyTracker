@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:maps="clr-namespace:Xamarin.Forms.Maps;assembly=Xamarin.Forms.Maps"
+             xmlns:vm="clr-namespace:JourneyTracker.ViewModels"
+             x:Class="JourneyTracker.Views.MainPage">
+
+    <ContentPage.BindingContext>
+        <vm:MainPageViewModel />
+    </ContentPage.BindingContext>
+    
+    <ContentPage.Content>
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="2*" />
+                <RowDefinition Height="*" />
+            </Grid.RowDefinitions>
+
+            <ContentView Content="{Binding Map}" Grid.Row="0" Grid.RowSpan="2" />
+
+            <StackLayout Grid.Row="1" VerticalOptions="Center">
+                <Button Text="{Binding ButtonLabel}" Command="{Binding ButtonCommand}" HorizontalOptions="Center" Padding="40,20" Font="16" BackgroundColor="{Binding ButtonColor}"/>
+            </StackLayout>
+
+
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>

@@ -3,7 +3,6 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="JourneyTracker.Views.AboutPage"
              xmlns:vm="clr-namespace:JourneyTracker.ViewModels"
-             xmlns:maps="clr-namespace:Xamarin.Forms.Maps;assembly=Xamarin.Forms.Maps"
              Title="{Binding Title}">
     
     <ContentPage.BindingContext>
@@ -16,7 +15,7 @@
         </ResourceDictionary>
     </ContentPage.Resources>
 
-    <!--<Grid>
+    <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto" />
             <RowDefinition Height="*" />
@@ -48,21 +47,6 @@
                         TextColor="White" />
             </StackLayout>
         </ScrollView>
-    </Grid>-->
-
-    <Grid>
-        <Grid.RowDefinitions>
-            <RowDefinition Height="*" />
-            <RowDefinition Height="*" />
-        </Grid.RowDefinitions>
-    
-        <maps:Map x:Name="map" MapType="Street" IsShowingUser="true" Grid.Row="0" />
-
-        <StackLayout Grid.Row="1">
-            <Button Text="Start" />
-        </StackLayout>
-        
-
     </Grid>
 
 </ContentPage>
