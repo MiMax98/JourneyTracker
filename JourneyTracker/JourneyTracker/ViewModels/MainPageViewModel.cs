@@ -18,7 +18,7 @@ namespace JourneyTracker.ViewModels
             State = TrackerState.Stopped;
             ButtonCommand = new Command(ButtonClicked);
             SetupMap();
-            _repository = new TrackerRepository();
+            _repository = new TrackingRepository();
         }
         private Stopwatch _stopwatch = new Stopwatch();
         private Location _lastLocation;
@@ -34,7 +34,7 @@ namespace JourneyTracker.ViewModels
         }
 
         private TrackerState _state;
-        private readonly TrackerRepository _repository;
+        private readonly TrackingRepository _repository;
 
         public TrackerState State
         {

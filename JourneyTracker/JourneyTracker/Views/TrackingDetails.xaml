@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="JourneyTracker.Views.TrackingDetails"
+             Title="{Binding Title}">
+    
+    <StackLayout Spacing="20" Padding="15">
+        <Label Text="Average speed:" FontSize="Medium" />
+        <Label Text="{Binding Path=Item.SpeedMetersPerSecond, StringFormat='{0:N2} m/s'}" FontSize="Small"/>
+        <Label Text="{Binding Path=Item.SpeedKilometersPerHour, StringFormat='{0:N2} km/h'}" FontSize="Small"/>
+        <Label Text="Distance:" FontSize="Medium" />
+        <Label Text="{Binding Path=Item.DistanceMeters, StringFormat='{0:N2} m'}" FontSize="Small"/>
+    </StackLayout>
+</ContentPage>

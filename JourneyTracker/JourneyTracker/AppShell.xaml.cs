@@ -1,7 +1,4 @@
-﻿using JourneyTracker.ViewModels;
-using JourneyTracker.Views;
-using System;
-using System.Collections.Generic;
+﻿using JourneyTracker.Views;
 using Xamarin.Forms;
 
 namespace JourneyTracker
@@ -13,6 +10,7 @@ namespace JourneyTracker
             InitializeComponent();
             Routing.RegisterRoute(nameof(ItemDetailPage), typeof(ItemDetailPage));
             Routing.RegisterRoute(nameof(NewItemPage), typeof(NewItemPage));
+            Routing.RegisterRoute(nameof(TrackingDetails), typeof(TrackingDetails));
         }
 
     }
