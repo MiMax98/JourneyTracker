@@ -1,5 +1,6 @@
 ﻿using JourneyTracker.Models;
 using JourneyTracker.Services;
+using JourneyTracker.Views;
 using System.Diagnostics;
 using System.Threading.Tasks;
 using System.Windows.Input;
@@ -14,15 +15,17 @@ namespace JourneyTracker.ViewModels
     {
         public MainPageViewModel()
         {
-            Title = "Main Page";
+            Title = "Tracking";
             State = TrackerState.Stopped;
             ButtonCommand = new Command(ButtonClicked);
             SetupMap();
             _repository = new TrackingRepository();
         }
-        private Stopwatch _stopwatch = new Stopwatch();
+        private Stopwatch _stopwatch;
         private Location _lastLocation;
         private Map _map;
+        private string _fileName;
+        
         public Map Map { get => _map; set => SetProperty(ref _map, value); }
         public string ButtonLabel
         {
@@ -80,30 +83,30 @@ namespace JourneyTracker.ViewModels
         private void Start()
         {
             State = TrackerState.Started;
+            _stopwatch = new Stopwatch();
             _stopwatch.Start();
-            var fileName = _repository.CreateFile();
+            _fileName = _repository.CreateFile();
             Device.StartTimer(new System.TimeSpan(0, 0, 5), () =>
               {
-                  PushLocation(fileName);
+                  PushLocation();
                   return State == TrackerState.Started;
               });
         }
 
-        private async void PushLocation(string fileName)
+        private async void PushLocation()
         {
             var location = await GetCurrentLocation();
             var distance = Location.CalculateDistance(_lastLocation ?? location, location, DistanceUnits.Kilometers) * 1000;
             _lastLocation = location;
-            _repository.Append(fileName, _stopwatch.Elapsed, location, distance);
+            _repository.Append(_fileName, _stopwatch.Elapsed, location, distance);
         }
 
-        private void Stop()
+        private async void Stop()
         {
             State = TrackerState.Stopped;
             _stopwatch.Stop();
-            _stopwatch.Restart();
             _lastLocation = null;
-            Debug.Write(_repository.GetLastFile());
+            await Shell.Current.GoToAsync($"{nameof(TrackingDetails)}?{nameof(TrackingDetailsViewModel.ItemId)}={_fileName}");
         }
     }
 }

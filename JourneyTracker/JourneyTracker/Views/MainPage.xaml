@@ -3,7 +3,8 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:maps="clr-namespace:Xamarin.Forms.Maps;assembly=Xamarin.Forms.Maps"
              xmlns:vm="clr-namespace:JourneyTracker.ViewModels"
-             x:Class="JourneyTracker.Views.MainPage">
+             x:Class="JourneyTracker.Views.MainPage"
+             Title="{Binding Title}">
 
     <ContentPage.BindingContext>
         <vm:MainPageViewModel />

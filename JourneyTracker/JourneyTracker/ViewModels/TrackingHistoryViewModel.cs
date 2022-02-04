@@ -28,7 +28,7 @@ namespace JourneyTracker.ViewModels
             if (item == null)
                 return;
 
-            await Shell.Current.GoToAsync($"{nameof(TrackingDetails)}?{nameof(ItemDetailViewModel.ItemId)}={item.Date.Ticks}");
+            await Shell.Current.GoToAsync($"{nameof(TrackingDetails)}?{nameof(TrackingDetailsViewModel.ItemId)}={item.Date.Ticks}");
         }
 
         private void LoadTrackingData()

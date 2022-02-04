@@ -22127,12 +22127,6 @@ namespace JourneyTracker.Droid
 			// aapt resource value: 0x7F070078
 			public const int googleg_standard_color_18 = 2131165304;
 			
-			// aapt resource value: 0x7F070080
-			public const int icon_about = 2131165312;
-			
-			// aapt resource value: 0x7F070081
-			public const int icon_feed = 2131165313;
-			
 			// aapt resource value: 0x7F070079
 			public const int ic_arrow_down_24dp = 2131165305;
 			
@@ -22153,6 +22147,12 @@ namespace JourneyTracker.Droid
 			
 			// aapt resource value: 0x7F07007F
 			public const int ic_mtrl_chip_close_circle = 2131165311;
+			
+			// aapt resource value: 0x7F070080
+			public const int list = 2131165312;
+			
+			// aapt resource value: 0x7F070081
+			public const int marker = 2131165313;
 			
 			// aapt resource value: 0x7F070082
 			public const int material_cursor_drawable = 2131165314;
@@ -22264,9 +22264,6 @@ namespace JourneyTracker.Droid
 			
 			// aapt resource value: 0x7F0700A6
 			public const int tooltip_frame_light = 2131165350;
-			
-			// aapt resource value: 0x7F0700A7
-			public const int xamarin_logo = 2131165351;
 			
 			static Drawable()
 			{

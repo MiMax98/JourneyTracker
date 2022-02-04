@@ -21,12 +21,12 @@ namespace JourneyTracker.Services
             var name = $"{now.Ticks}.txt";
             var path = Path.Combine(Folder, name);
             File.WriteAllText(path, string.Empty);
-            return name;
+            return now.Ticks.ToString();
         }
 
         public void Append(string name, TimeSpan elapsed, Location location, double distance)
         {
-            var path = Path.Combine(Folder, name);
+            var path = Path.Combine(Folder, $"{name}.txt");
             File.AppendAllLines(path, new string[] { $"{elapsed.Ticks} {location.Latitude} {location.Longitude} {distance:N2}" });
         }
 
@@ -57,15 +57,6 @@ namespace JourneyTracker.Services
                 DistanceMeters = distance,
                 Time = points.Last().Elapsed
             };
-        }
-
-        public string GetLastFile()
-        {
-            var files = Directory.GetFiles(Folder);
-            var name = files.OrderByDescending(f => f).FirstOrDefault();
-            if (name == null) return String.Empty;
-            var path = Path.Combine(Folder, name);
-            return File.ReadAllText(path);
         }
     }
 }

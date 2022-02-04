@@ -10,6 +10,8 @@ namespace JourneyTracker.Models
         public TimeSpan Time { get; set; }
         public double SpeedMetersPerSecond => DistanceMeters / Time.TotalSeconds;
         public double SpeedKilometersPerHour => DistanceMeters / 1000 / Time.TotalHours;
+        public int Steps => (int)(DistanceMeters / 0.762);
+        public int BurntKcal => (int)(Steps * 0.04); 
         public List<TrackingPoint> Points { get; set; }
     }
 }
